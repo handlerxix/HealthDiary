@@ -8,51 +8,17 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <TextView
-                    android:id="@+id/sex_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/input_your_sex"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            <Spinner
-                    android:id="@+id/sex_spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="5dp"
-                    android:entries="@array/sex_list"
-                    android:textColor="@android:color/secondary_text_light"
-                    app:layout_constraintBottom_toBottomOf="@+id/sex_text"
-                    app:layout_constraintStart_toEndOf="@+id/sex_text" />
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
                 android:orientation="vertical">
 
             <LinearLayout
@@ -60,29 +26,29 @@
                     android:layout_height="wrap_content">
 
                 <TextView
-                        android:id="@+id/birth_text"
+                        android:id="@+id/sex_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="20dp"
-                        android:text="@string/input_your_birth_date"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/input_your_sex"
                         android:textColor="#020202"
                         android:textSize="20sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/sex_text" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                        android:id="@+id/button_choose_date"
+                <Spinner
+                        android:id="@+id/sex_spinner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/input"
-                        app:layout_constraintStart_toEndOf="@+id/birth_text"
-                        app:layout_constraintTop_toBottomOf="@+id/sex_text" />
-
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:entries="@array/sex_list"
+                        android:textColor="@android:color/secondary_text_light"
+                        app:layout_constraintBottom_toBottomOf="@+id/sex_text"
+                        app:layout_constraintStart_toEndOf="@+id/sex_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -90,103 +56,298 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/birth_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/input_your_birth_date"
+                            android:textColor="#020202"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sex_text" />
+
+                    <Button
+                            android:id="@+id/button_choose_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/input"
+                            app:layout_constraintStart_toEndOf="@+id/birth_text"
+                            app:layout_constraintTop_toBottomOf="@+id/sex_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/input_age"
+                                android:layout_width="237dp"
+                                android:layout_height="23dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:text="@string/choose_your_birth_date"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/height_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/input_your_height"
+                            android:textColor="#040404"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+
+                    <EditText
+                            android:id="@+id/input_height"
+                            android:layout_width="254dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/secondary_text_light"
+                            app:layout_constraintStart_toStartOf="@+id/input_weight"
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/weight_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/input_your_weight"
+                            android:textColor="#040404"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+                    <EditText
+                            android:id="@+id/input_weight"
+                            android:layout_width="255dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/secondary_text_light"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/weight_text"
+                            app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/mass_index_hint"
+                                android:layout_width="342dp"
+                                android:layout_height="21dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:text="@string/mass_index_hint"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/temp_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/input_your_temp"
+                            android:textColor="#020202"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+
+                    <EditText
+                            android:id="@+id/input_temp"
+                            android:layout_width="178dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/secondary_text_light"
+                            app:layout_constraintStart_toStartOf="@+id/input_weight"
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TextView
+                                android:id="@+id/temp_hint"
+                                android:layout_width="237dp"
+                                android:layout_height="23dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:text="@string/temp_hint"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                     <TextView
-                            android:id="@+id/input_age"
-                            android:layout_width="237dp"
-                            android:layout_height="23dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginEnd="25dp"
-                            android:layout_marginRight="25dp"
-                            android:gravity="center"
-                            android:text="@string/choose_your_birth_date"
-                            android:textSize="15sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/pressure_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/your_pressure"
+                            android:textColor="#050505"
+                            android:textSize="20sp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
 
-            </LinearLayout>
+                    <EditText
+                            android:id="@+id/input_pressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:textColor="@android:color/secondary_text_light"
+                            app:layout_constraintStart_toStartOf="@+id/input_weight"
+                            app:layout_constraintTop_toBottomOf="@+id/input_weight" />
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-                <TextView
-                        android:id="@+id/height_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:text="@string/input_your_height"
-                        android:textColor="#040404"
-                        android:textSize="20sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
+                        <TextView
+                                android:id="@+id/pressure_hint"
+                                android:layout_width="237dp"
+                                android:layout_height="23dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:text="@string/pressure_hint"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <EditText
-                        android:id="@+id/input_height"
-                        android:layout_width="254dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@android:color/secondary_text_light"
-                        app:layout_constraintStart_toStartOf="@+id/input_weight"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                        android:id="@+id/weight_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:text="@string/input_your_weight"
-                        android:textColor="#040404"
-                        android:textSize="20sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/age_text" />
-
-                <EditText
-                        android:id="@+id/input_weight"
-                        android:layout_width="255dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@android:color/secondary_text_light"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/weight_text"
-                        app:layout_constraintTop_toBottomOf="@+id/age_text" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -199,21 +360,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                    <TextView
-                            android:id="@+id/mass_index_hint"
-                            android:layout_width="342dp"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginEnd="25dp"
-                            android:layout_marginRight="25dp"
-                            android:gravity="center"
-                            android:text="@string/mass_index_hint"
-                            android:textSize="15sp"
+                    <Button
+                            android:id="@+id/button_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
@@ -223,151 +377,36 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                <TextView
-                        android:id="@+id/temp_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:text="@string/input_your_temp"
-                        android:textColor="#020202"
-                        android:textSize="20sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
-
-                <EditText
-                        android:id="@+id/input_temp"
-                        android:layout_width="178dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@android:color/secondary_text_light"
-                        app:layout_constraintStart_toStartOf="@+id/input_weight"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
-
-            </LinearLayout>
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    <TextView
-                            android:id="@+id/temp_hint"
-                            android:layout_width="237dp"
-                            android:layout_height="23dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginEnd="25dp"
-                            android:layout_marginRight="25dp"
-                            android:gravity="center"
-                            android:text="@string/temp_hint"
-                            android:textSize="15sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageButton
+                        android:id="@+id/imageButtonRecomend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/rec_icon" />
 
                 <TextView
-                        android:id="@+id/pressure_text"
+                        android:id="@+id/textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="8dp"
-                        android:text="@string/your_pressure"
-                        android:textColor="#050505"
-                        android:textSize="20sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
-
-                <EditText
-                        android:id="@+id/input_pressure"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:ems="10"
-                        android:inputType="numberDecimal"
-                        android:textColor="@android:color/secondary_text_light"
-                        app:layout_constraintStart_toStartOf="@+id/input_weight"
-                        app:layout_constraintTop_toBottomOf="@+id/input_weight" />
-
+                        android:text="@string/menu_recommendations" />
             </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    <TextView
-                            android:id="@+id/pressure_hint"
-                            android:layout_width="237dp"
-                            android:layout_height="23dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginEnd="25dp"
-                            android:layout_marginRight="25dp"
-                            android:gravity="center"
-                            android:text="@string/pressure_hint"
-                            android:textSize="15sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                <Button
-                        android:id="@+id/button_save"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/save"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 

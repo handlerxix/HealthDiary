@@ -1,4 +1,4 @@
-package com.example.healthdiary.db
+package com.example.healthdiary.model
 
 import android.database.Cursor
 import kotlin.collections.ArrayList

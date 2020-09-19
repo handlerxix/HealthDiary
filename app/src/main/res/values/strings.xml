@@ -41,6 +41,10 @@
     <string name="high_press">Повышенное давлене</string>
     <string name="low_press">Пониженное давление</string>
     <string name="norm_press">Давление в пределах нормы</string>
+    <string name="menu_recommendations">Рекомендации</string>
+    <string name="recommendation">Рекомендация</string>
+    <string name="title">Title</string>
+    <string name="recommendation_text">Текст рекомендации</string>
 
     <string-array name="sex_list">
         <item>Женский</item>

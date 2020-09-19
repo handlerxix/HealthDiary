@@ -1,9 +1,8 @@
-package com.example.healthdiary.db
+package com.example.healthdiary.model
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import java.util.*
 import kotlin.collections.ArrayList
 
 class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory? = null) :

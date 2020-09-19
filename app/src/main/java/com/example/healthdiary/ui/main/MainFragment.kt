@@ -1,4 +1,4 @@
-package com.example.healthdiary.ui
+package com.example.healthdiary.ui.main
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import com.example.healthdiary.R
-import com.example.healthdiary.db.DBHelper
-import com.example.healthdiary.db.UserParameter
+import com.example.healthdiary.model.DBHelper
+import com.example.healthdiary.model.UserParameter
+import com.example.healthdiary.ui.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -242,10 +241,16 @@ class MainFragment : Fragment() {
             }
         }
 
-        val massIndex = AppHelper.getMassIndex(params.weight, params.height)
+        val massIndex =
+            AppHelper.getMassIndex(
+                params.weight,
+                params.height
+            )
         inputMassIndexHint.text = getWeightIndexHint(massIndex)
 
-        val color = when (AppHelper.getWeightProblemCode(massIndex)) {
+        val color = when (AppHelper.getWeightProblemCode(
+            massIndex
+        )) {
             CodeValue.HIGH_WEIGHT_INDEX, CodeValue.LOW_WEIGHT_INDEX ->
                 ContextCompat.getColor(
                     requireContext(),
