@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Дневник здоровья</string>
+    <string name="nav_header_title">Дневник здоровья</string>
+    <string name="menu_main">Главный экран</string>
+    <string name="input_your_sex">Пол:</string>
+    <string name="input_your_birth_date">Дата рождения:</string>
+    <string name="input">Ввод</string>
+    <string name="choose_your_birth_date">Выберите Вашу дату рождения</string>
+    <string name="input_your_weight">Вес:</string>
+    <string name="input_your_height">Рост:</string>
+    <string name="mass_index_hint">Введите рост и вес</string>
+    <string name="save">Сохранить</string>
+    <string name="date">Дата</string>
+    <string name="weight">Вес</string>
+    <string name="height">Рост</string>
+    <string name="temp">Температура</string>
+    <string name="sex">Пол</string>
+    <string name="pressure">Давление</string>
+    <string name="date_format">dd.MM.yyyy</string>
+    <string name="fill_empty_imputs">Заполните пустые поля!</string>
+    <string name="birth_date_key">birthDate</string>
+    <string name="values_saved">Новые значения были сохранены!</string>
+    <string name="ru">ru</string>
+    <string name="mass_index_deficit_hint">Дефицит массы тела</string>
+    <string name="mass_index_normal_hint">Нормальная масса тела</string>
+    <string name="mass_index_excess_hint">Лишний вес</string>
+    <string name="mass_index_first_degree_hint">Первая степень ожирения</string>
+    <string name="mass_index_second_degree_hint">Вторая степень ожирения</string>
+    <string name="mass_index_third_degree_hint">Третья степень ожирения</string>
+    <string name="dot">.</string>
+    <string name="your_age">Ваша дата рождения: %s</string>
+    <string name="month">Месяц</string>
+    <string name="water_control_history">Журнал</string>
+    <string name="your_pressure">Давление:</string>
+    <string name="input_your_temp">Температура:</string>
+    <string name="temp_hint">Введите Вашу температуру</string>
+    <string name="pressure_hint">Введите Ваше давление</string>
+    <string name="high_temp">Повышенная температура</string>
+    <string name="low_temp">Пониженная температура</string>
+    <string name="norm_temp">Температура в пределах нормы</string>
+    <string name="high_press">Повышенное давлене</string>
+    <string name="low_press">Пониженное давление</string>
+    <string name="norm_press">Давление в пределах нормы</string>
+
+    <string-array name="sex_list">
+        <item>Женский</item>
+        <item>Мужской</item>
+    </string-array>
+</resources>
