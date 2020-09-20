@@ -37,6 +37,7 @@ class MainFragment : Fragment() {
     lateinit var saveButton: Button
     lateinit var butRec: ImageButton
     lateinit var butMeds: ImageButton
+    lateinit var butWater: ImageButton
 
     //TextFields
     lateinit var inputAgeHint: TextView
@@ -64,10 +65,12 @@ class MainFragment : Fragment() {
 
         butRec = root.findViewById(R.id.imageButtonRecomend)
         butMeds = root.findViewById(R.id.imageButtonMeds)
+        butWater = root.findViewById(R.id.imageButtonWater)
 
         val navController = requireActivity().findNavController(R.id.nav_host_fragment)
         Navigation.setViewNavController(butRec, navController)
         Navigation.setViewNavController(butMeds, navController)
+        Navigation.setViewNavController(butWater, navController)
 
         val dateFormat = SimpleDateFormat(getString(R.string.date_format), Locale(getString(R.string.ru)))
 
@@ -165,6 +168,9 @@ class MainFragment : Fragment() {
         }
         butMeds.setOnClickListener {
             navController.navigate(R.id.nav_medicaments)
+        }
+        butWater.setOnClickListener {
+            navController.navigate(R.id.nav_watertrack)
         }
         return root
     }

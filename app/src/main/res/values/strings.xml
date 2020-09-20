@@ -30,7 +30,6 @@
     <string name="dot">.</string>
     <string name="your_age">Ваша дата рождения: %s</string>
     <string name="month">Месяц</string>
-    <string name="water_control_history">Журнал</string>
     <string name="your_pressure">Давление:</string>
     <string name="input_your_temp">Температура:</string>
     <string name="temp_hint">Введите Вашу температуру</string>
@@ -50,6 +49,22 @@
     <string name="title_dosage">Дозировка</string>
     <string name="manufacturer_title">Производитель</string>
     <string name="title_price">Цена</string>
+    <string name="menu_watertrack">Учёт жидкости</string>
+    <string name="water_control">Контроль выпитой жидкости</string>
+    <string name="zero_percent">0%</string>
+    <string name="ml">ml</string>
+    <string name="water">Вода</string>
+    <string name="coffee">Кофе</string>
+    <string name="tea">Чай</string>
+    <string name="count">Количество:</string>
+    <string name="add">Добавить</string>
+    <string name="liquid">Жидкость</string>
+    <string name="progress_percent">%d %%</string>
+    <string name="water_current">%d / %d мл</string>
+    <string name="adding">Добавление</string>
+    <string name="water_control_history">Журнал</string>
+    <string name="not_enough_data">Недостаточно данных!</string>
+    <string name="male">Мужской</string>
 
     <string-array name="sex_list">
         <item>Женский</item>

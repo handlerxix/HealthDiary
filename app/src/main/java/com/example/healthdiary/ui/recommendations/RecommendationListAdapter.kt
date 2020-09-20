@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.healthdiary.R
 import com.example.healthdiary.model.Recommendation
-import com.example.healthdiary.ui.AbstractListAdapter
+import com.example.healthdiary.utils.AbstractListAdapter
 import com.example.healthdiary.ui.cutWordsWithEnding
 
 class RecommendationListAdapter(context: Context, objects: List<Recommendation>) :

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.TextView
 import com.example.healthdiary.R
 import com.example.healthdiary.model.Medicament
-import com.example.healthdiary.ui.AbstractListAdapter
+import com.example.healthdiary.utils.AbstractListAdapter
 import com.example.healthdiary.ui.cutWordsWithEnding
 
 class MedicamentsListAdapter(context: Context, objects: List<Medicament>) :

@@ -16,5 +16,9 @@
                 android:id="@+id/nav_medicaments"
                 android:icon="@drawable/pills_icon1"
                 android:title="@string/menu_medicaments" />
+        <item
+                android:id="@+id/nav_watertrack"
+                android:icon="@drawable/water_icon1"
+                android:title="@string/menu_watertrack" />
     </group>
 </menu>
