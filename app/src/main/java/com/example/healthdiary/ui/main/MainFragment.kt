@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.healthdiary.R
 import com.example.healthdiary.model.DBHelper
 import com.example.healthdiary.model.UserParameter
@@ -33,6 +35,8 @@ class MainFragment : Fragment() {
     //Buttons
     lateinit var chooseDateButton: Button
     lateinit var saveButton: Button
+    lateinit var butRec: ImageButton
+    lateinit var butMeds: ImageButton
 
     //TextFields
     lateinit var inputAgeHint: TextView
@@ -57,6 +61,13 @@ class MainFragment : Fragment() {
         inputTemp = root.findViewById(R.id.input_temp)
         sexSpinner = root.findViewById(R.id.sex_spinner)
         inputPressure = root.findViewById(R.id.input_pressure)
+
+        butRec = root.findViewById(R.id.imageButtonRecomend)
+        butMeds = root.findViewById(R.id.imageButtonMeds)
+
+        val navController = requireActivity().findNavController(R.id.nav_host_fragment)
+        Navigation.setViewNavController(butRec, navController)
+        Navigation.setViewNavController(butMeds, navController)
 
         val dateFormat = SimpleDateFormat(getString(R.string.date_format), Locale(getString(R.string.ru)))
 
@@ -147,6 +158,13 @@ class MainFragment : Fragment() {
                 ).show()
                 updateHints(root)
             }
+        }
+
+        butRec.setOnClickListener {
+            navController.navigate(R.id.nav_recommendations)
+        }
+        butMeds.setOnClickListener {
+            navController.navigate(R.id.nav_medicaments)
         }
         return root
     }
@@ -241,16 +259,10 @@ class MainFragment : Fragment() {
             }
         }
 
-        val massIndex =
-            AppHelper.getMassIndex(
-                params.weight,
-                params.height
-            )
+        val massIndex = AppHelper.getMassIndex(params.weight, params.height)
         inputMassIndexHint.text = getWeightIndexHint(massIndex)
 
-        val color = when (AppHelper.getWeightProblemCode(
-            massIndex
-        )) {
+        val color = when (AppHelper.getWeightProblemCode(massIndex)) {
             CodeValue.HIGH_WEIGHT_INDEX, CodeValue.LOW_WEIGHT_INDEX ->
                 ContextCompat.getColor(
                     requireContext(),

@@ -6,14 +6,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.healthdiary.R
 import com.example.healthdiary.model.Recommendation
+import com.example.healthdiary.ui.AbstractListAdapter
 import com.example.healthdiary.ui.cutWordsWithEnding
 
 class RecommendationListAdapter(context: Context, objects: List<Recommendation>) :
-    ArrayAdapter<Recommendation>(context, R.layout.item_list_element, objects) {
+    AbstractListAdapter<Recommendation>(context, R.layout.item_list_element, objects) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         return if (convertView != null) {
@@ -29,7 +29,7 @@ class RecommendationListAdapter(context: Context, objects: List<Recommendation>)
     }
 
     @SuppressLint("SetTextI18n")
-    fun createViewFromResource(v: View, position: Int): View {
+    override fun createViewFromResource(v: View, position: Int): View {
         val title: TextView = v.findViewById(R.id.recommendation_title)
         val descr: TextView = v.findViewById(R.id.recommendation_description)
         val recommendation = getItem(position)!!

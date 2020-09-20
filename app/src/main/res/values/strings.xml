@@ -45,6 +45,11 @@
     <string name="recommendation">Рекомендация</string>
     <string name="title">Title</string>
     <string name="recommendation_text">Текст рекомендации</string>
+    <string name="menu_medicaments">Медикаменты</string>
+    <string name="medicament_name">Наименование</string>
+    <string name="title_dosage">Дозировка</string>
+    <string name="manufacturer_title">Производитель</string>
+    <string name="title_price">Цена</string>
 
     <string-array name="sex_list">
         <item>Женский</item>
