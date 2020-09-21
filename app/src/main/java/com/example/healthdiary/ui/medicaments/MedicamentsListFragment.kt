@@ -13,8 +13,7 @@ import com.example.healthdiary.utils.MedicamentsUtil
 
 class MedicamentsListFragment : ListFragment() {
 
-    private val medicamentsService =
-        MedicamentsUtil()
+    private val medicamentsService = MedicamentsUtil()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
